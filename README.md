@@ -21,6 +21,7 @@
 
 #Структура проекта
 
+```
 analyzer/
   analyzer.go        — реализация анализатора
   rules_test.go      — unit-тесты правил
@@ -34,42 +35,43 @@ testdata/
 
 demo/
   main.go            — пример использования
+```
 
 #Сборка и запуск 
 
 Из корня проекта:
 
-go build -o loglint ./cmd/loglint
+`go build -o loglint ./cmd/loglint`
 
 Windows:
 
-go build -o loglint.exe ./cmd/loglint
+`go build -o loglint.exe ./cmd/loglint`
 
 1. Запуск без сборки (через go run)
 
 Проверить конкретный пакет/директорию:
 
-go run ./cmd/loglint ./demo
+`go run ./cmd/loglint ./demo`
 
 Проверить весь проект:
 
-go run ./cmd/loglint ./...
+`go run ./cmd/loglint ./...`
 
 2. Запуск собранного бинаря
 
 Linux/macOS:
 
-./loglint ./...
+`./loglint ./...`
 
 Windows:
 
-./loglint.exe ./...
+`./loglint.exe ./...`
 
 
 Линтер анализирует вызовы:
 
-log/slog
-go.uber.org/zap
+`log/slog`
+`go.uber.org/zap`
 
 и применяет правила к первому аргументу (сообщению):
 
@@ -156,7 +158,7 @@ func main() {
 
 Запуск проверки demo:
 
-go run ./cmd/loglint ./demo
+`go run ./cmd/loglint ./demo`
 
 
 #Тестирование
@@ -169,7 +171,7 @@ Unit-тесты для отдельных правил
 
 Запуск всех тестов:
 
-go test ./…
+`go test ./…`
 
 
 
