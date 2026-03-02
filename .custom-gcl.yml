@@ -1,0 +1,8 @@
+version: v2.10.1
+name: custom-gcl
+destination: .
+
+plugins:
+  - module: "linter.com/loglint"
+    path: .
+    import: "linter.com/loglint/plugin/loglint"
